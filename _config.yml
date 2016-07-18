@@ -4,7 +4,7 @@ baseurl: ''
 # url: http://plantcv.danforthcenter.org/
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 # Jekyll-Bootstrap
