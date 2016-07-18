@@ -5,7 +5,7 @@ baseurl: ''
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 # Jekyll-Bootstrap
 JB:
