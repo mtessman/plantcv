@@ -774,7 +774,7 @@ def process_results(args):
     feature_fields = ['area', 'hull-area', 'solidity', 'perimeter', 'width', 'height',
                       'longest_axis', 'center-of-mass-x', 'center-of-mass-y', 'hull_vertices',
                       'in_bounds', 'ellipse_center_x', 'ellipse_center_y', 'ellipse_major_axis',
-                      'ellipse_minor_axis', 'ellipse_angle', 'ellipse_eccentricity']
+                      'ellipse_minor_axis', 'ellipse_angle', 'ellipse_eccentricity', 'hue', 'saturation']
     opt_feature_fields = ['y-position', 'height_above_bound', 'height_below_bound',
                           'above_bound_area', 'percent_above_bound_area', 'below_bound_area',
                           'percent_below_bound_area']
@@ -821,6 +821,8 @@ def process_results(args):
                 boundary_data = {}
                 marker = []
                 marker_data = {}
+                for field in feature_fields:
+                    feature_data[field] = 0
                 # Open results file
                 with open(dirpath + '/' + filename) as results:
                     # For each line in the file
